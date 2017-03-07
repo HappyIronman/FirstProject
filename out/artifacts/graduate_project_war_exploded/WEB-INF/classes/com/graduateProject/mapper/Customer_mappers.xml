@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.graduateProject.DAO.CustomerDAO">
+    <select id="selectAllCustomer"  resultType="com.graduateProject.entity.Customer">
+        select * from customer
+    </select>
+
+    <insert id="addCustomer" parameterType="com.graduateProject.entity.Customer"
+            useGeneratedKeys="true" keyProperty="id" >
+        insert into customer(company,cname,tel,address)
+        values(#{company},#{cname},#{tel},#{address})
+    </insert>
+
+    <delete id="deleteCustomer" parameterType="java.lang.Integer">
+        delete from customer where id = #{id}
+    </delete>
+
+    <update id="updateCustomer" parameterType="com.graduateProject.entity.Customer">
+        UPDATE customer
+        <set>
+            <if test="cname!='Empty' ">
+                cname=#{cname},
+            </if>
+            <if test="tel!='Empty' ">
+                tel=#{tel},
+            </if>
+            <if test="company!='Empty'">
+                company=#{company},
+            </if>
+            <if test="address!='Empty'">
+                address=#{address},
+            </if>
+
+        </set>
+        WHERE id = #{id};
+    </update>
+
+    <select id="selectCustomer" parameterType="com.graduateProject.entity.Customer" resultType="com.graduateProject.entity.Customer">
+        select * from customer
+        <where>
+            <if test="id!=0">
+                id=#{id}
+            </if>
+            <if test="cname!='Empty'">
+                and cname=#{cname}
+            </if>
+            <if test="company!='Empty'">
+                and company=#{company}
+            </if>
+            <if test="tel!='Empty'">
+                and tel=#{tel}
+            </if>
+        </where>
+    </select>
+</mapper>

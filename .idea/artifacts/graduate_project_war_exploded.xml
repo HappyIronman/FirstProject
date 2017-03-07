@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="graduate_project:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/graduate_project_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="graduate_project/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="graduate_project" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.7.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.7.RELEASE" />
+          <element id="library" level="project" name="aopalliance-1.0" />
+          <element id="library" level="project" name="mybatis-3.2.8" />
+          <element id="library" level="project" name="jstl" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

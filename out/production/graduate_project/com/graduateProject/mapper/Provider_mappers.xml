@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.graduateProject.DAO.ProviderDAO">
+    <select id="selectAllProvider"  resultType="com.graduateProject.entity.Provider">
+        select * from provider
+    </select>
+
+    <insert id="addProvider" parameterType="com.graduateProject.entity.Provider"
+            useGeneratedKeys="true" keyProperty="id" >
+        insert into provider(company,cname,tel,address,fax)
+        values(#{company},#{cname},#{tel},#{address},#{fax})
+    </insert>
+
+    <delete id="deleteProvider" parameterType="java.lang.Integer">
+        delete from provider where id = #{id}
+    </delete>
+
+    <update id="updateProvider" parameterType="com.graduateProject.entity.Provider">
+        UPDATE provider
+        <set>
+            <if test="cname!='Empty' ">
+                cname=#{cname},
+            </if>
+            <if test="tel!='Empty' ">
+                tel=#{tel},
+            </if>
+            <if test="company!='Empty'">
+                company=#{company},
+            </if>
+            <if test="address!='Empty'">
+                address=#{address},
+            </if>
+            <if test="fax!='Empty'">
+                fax=#{fax}
+            </if>
+        </set>
+        WHERE id = #{id};
+    </update>
+
+    <select id="selectProvider" parameterType="com.graduateProject.entity.Provider" resultType="com.graduateProject.entity.Provider">
+        select * from provider
+        <where>
+            <if test="id!=0">
+                id=#{id}
+            </if>
+            <if test="cname!='Empty'">
+                and cname=#{cname}
+            </if>
+            <if test="company!='Empty'">
+                and company=#{company}
+            </if>
+            <if test="tel!='Empty'">
+                and tel=#{tel}
+            </if>
+        </where>
+    </select>
+</mapper>

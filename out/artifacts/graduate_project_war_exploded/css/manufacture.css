@@ -1,0 +1,75 @@
+body {
+    width: 1400px;
+    margin: 40px auto;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+}
+
+p{
+    text-align: center;
+}
+.left_div{
+    width: 210px;
+    margin: 80px 20px auto 20px;
+    height: auto;
+    float: left;
+}
+.left_div form{
+    width: inherit;
+    height: inherit;
+}
+.left_div input{
+    width: inherit;
+    height: 30px;
+    margin-top: 8px;
+}
+
+
+.mid_div{
+    width: 700px;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+}
+
+.mid_div table{
+    margin-left: 35px;
+}
+.search_div{
+    width: inherit;
+    height: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.right_div{
+    width: 210px;
+    margin-left: 20px;
+    margin-top: 80px;
+    float: left;
+}
+
+.update_div{
+    width: inherit;
+    height: auto;
+}
+
+.update_div input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.update_div select{
+    width: 100%;
+}
+
+.delete_div{
+    width: inherit;
+    margin-top: 40px;
+}
+.delete_div input{
+    width: 100%;
+}

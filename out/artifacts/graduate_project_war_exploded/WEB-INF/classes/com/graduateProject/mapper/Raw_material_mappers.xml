@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.graduateProject.DAO.Raw_materialDAO">
+
+    <select id="selectAllRaw"  resultType="com.graduateProject.entity.Raw_material">
+        select * from raw_material
+    </select>
+
+
+    <select id="selectRaw" parameterType="com.graduateProject.entity.Raw_material" resultType="com.graduateProject.entity.Raw_material">
+        select * from raw_material
+        <where>
+            <if test="id!=0">
+                id=#{id}
+            </if>
+            <if test="name!='Empty'">
+                and name=#{name}
+            </if>
+            <if test="provider!='Empty'">
+                and provider=#{provider}
+            </if>
+        </where>
+    </select>
+
+</mapper>
