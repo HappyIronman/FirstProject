@@ -23,6 +23,7 @@ public class Main_page {
     private User_inter user_service;
 
 
+    //主页面
     @RequestMapping(value = "/main_page/{id}",method = RequestMethod.GET)
     public String MainPage(@PathVariable("id")int user_id, ModelMap modelMap){
         User user=user_service.getUserByID(user_id);

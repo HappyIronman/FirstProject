@@ -19,6 +19,7 @@ public class Export_page {
     @Autowired
     private Customer_inter customer_service;
 
+    //出口信息页面
     @RequestMapping(value = "/export",method = RequestMethod.GET)
     public String Export(ModelMap modelMap){
         List<Customer> l_customer=customer_service.getAllCustomer();
@@ -26,6 +27,7 @@ public class Export_page {
         return "export_page";
     }
 
+    //增加
     @RequestMapping(value = "/addCustomer",method = RequestMethod.POST)
     public String AddCustomer(Customer customer){
         System.out.println(customer.getCname());
@@ -38,6 +40,7 @@ public class Export_page {
             return "errorPage";
         }
     }
+    //更新
     @RequestMapping(value = "/updateCustomer",method = RequestMethod.POST)
     public String updateCustomer(Customer customer){
         System.out.println(customer.getId()+customer.getCname());
@@ -47,6 +50,7 @@ public class Export_page {
         return "errorPage";
     }
 
+    //查找
     @RequestMapping(value = "/searchCustomer",method = RequestMethod.POST)
     public String searchCustomer(Customer customer,ModelMap modelMap){
         System.out.println(customer.getId()+customer.getCname());
@@ -56,6 +60,7 @@ public class Export_page {
         return "export_page";
     }
 
+    //删除
     @RequestMapping(value = "/deleteCustomer",method = RequestMethod.POST)
     public String deleteCustomer(int id){
         if(customer_service.deleteCustomer(id)){

@@ -1,3 +1,4 @@
+<!-- 报表输出页面代码-->
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -20,12 +21,12 @@
     <table class="bordered">
         <thead>
         <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>num</th>
-            <th>per_price</th>
-            <th>date</th>
-            <th>method</th>
+            <th>ID流水号</th>
+            <th>商品名称</th>
+            <th>数量</th>
+            <th>单价（元）</th>
+            <th>交易日期</th>
+            <th>交易方式</th>
         </tr>
         </thead>
         <c:forEach items="${l_finance}" var="finance" varStatus="s" begin="0" end="${l_finance.size()}">

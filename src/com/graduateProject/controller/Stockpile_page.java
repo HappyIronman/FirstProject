@@ -22,6 +22,7 @@ public class Stockpile_page {
     @Autowired
     private Raw_material_inter raw_service;
 
+    //成品模具库存页面
     @RequestMapping(value = "/stockpile_model",method = RequestMethod.GET)
     public String Stockpile_model(ModelMap modelMap){
         List<Model> l_model=model_service.getAllModel();
@@ -29,6 +30,7 @@ public class Stockpile_page {
         return "stockpile_model_page";
     }
 
+    //原材料信息页面
     @RequestMapping(value = "/stockpile_raw",method = RequestMethod.GET)
     public String Stockpile_raw(ModelMap modelMap){
         List<Raw_material>  l_raw=raw_service.getAllRaw();
@@ -40,6 +42,7 @@ public class Stockpile_page {
 
 
 
+    //搜索原材料
     @RequestMapping(value = "/searchRaw",method = RequestMethod.POST)
     public String searchRaw(Raw_material raw,ModelMap modelMap){
         System.out.println(raw.getId()+raw.getName());
@@ -48,7 +51,8 @@ public class Stockpile_page {
         modelMap.addAttribute("l_raw",l_raw);
         return "stockpile_raw_page";
     }
-    
+
+    //搜索成品磨具
     @RequestMapping(value = "/searchModel",method = RequestMethod.POST)
     public String searchModel(Model model,ModelMap modelMap){
         System.out.println(model.getId()+model.getName());

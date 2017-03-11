@@ -17,6 +17,7 @@ public class Output_page {
     @Autowired
     private Finance_inter finance_service;
 
+    //报表输出页面
     @RequestMapping(value = "/output")
     String OutputFinance(ModelMap modelMap){
         List<Finance> l_finance=finance_service.getAllFinance();

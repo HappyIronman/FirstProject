@@ -1,8 +1,9 @@
+<!--登录界面网页代码-->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>晟润业贸易（大连）有限公司</title>
+  <title>XXX贸易（大连）有限公司</title>
   <link href="<%=request.getContextPath()%>/css/login.css" type="text/css" rel="stylesheet">
   <script src="<%=request.getContextPath()%>/js/jquery-1.8.2.min.js"></script>
 
@@ -34,9 +35,8 @@
 </head>
 <body>
 
-
 <div class="login">
-  <div class="message">晟润业系统-用户登录</div>
+  <div class="message">XXX系统-用户登录</div>
   <div id="darkbannerwrap"></div>
 
   <form method="post" action="/verify" id="login_form">

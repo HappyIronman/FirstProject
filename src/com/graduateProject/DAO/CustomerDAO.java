@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-/**
- * Created by dell on 3/6/2017.
- */
+
+
 @Repository
 public interface CustomerDAO {
     public List<Customer> selectAllCustomer();

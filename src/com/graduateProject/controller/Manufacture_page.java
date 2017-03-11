@@ -19,6 +19,7 @@ public class Manufacture_page {
     @Autowired
     private Provider_inter provider_service;
 
+    //模具加工页面
     @RequestMapping(value = "/manufacture",method = RequestMethod.GET)
     public String Manufacture(ModelMap modelMap){
         List<Provider> l_provider=provider_service.getAllProvider();
@@ -26,6 +27,7 @@ public class Manufacture_page {
         return "manufacture_page";
     }
 
+    //增加
     @RequestMapping(value = "/addProvider",method = RequestMethod.POST)
     public String AddProvider(Provider provider){
         System.out.println(provider.getCname());
@@ -38,6 +40,7 @@ public class Manufacture_page {
             return "errorPage";
         }
     }
+    //更新
     @RequestMapping(value = "/updateProvider",method = RequestMethod.POST)
     public String updateProvider(Provider provider){
         System.out.println(provider.getId()+provider.getCname());
@@ -47,6 +50,7 @@ public class Manufacture_page {
         return "errorPage";
     }
 
+    //搜索
     @RequestMapping(value = "/searchProvider",method = RequestMethod.POST)
     public String searchProvider(Provider provider,ModelMap modelMap){
         System.out.println(provider.getId()+provider.getCname());
@@ -56,6 +60,7 @@ public class Manufacture_page {
         return "manufacture_page";
     }
 
+    //删除
     @RequestMapping(value = "/deleteProvider",method = RequestMethod.POST)
     public String deleteProvider(int id){
         if(provider_service.deleteProvider(id)){

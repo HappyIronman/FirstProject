@@ -16,7 +16,7 @@
     <table>
         <tr>
             <td></td>
-            <td><span>晟润业贸易（大连）有限公司</span>
+            <td><span>XXX贸易（大连）有限公司</span>
                 <p><b>主营产品：</b> 精密模具 </p></td>
         </tr>
     </table>

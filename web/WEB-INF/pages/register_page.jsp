@@ -1,8 +1,9 @@
+<!--注册页面代码-->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>晟润业系统-用户注册</title>
+    <title>XXX系统-用户注册</title>
     <link href="<%=request.getContextPath()%>/css/register.css" type="text/css" rel="stylesheet">
     <script src="<%=request.getContextPath()%>/js/check.js"></script>
     <script src="<%=request.getContextPath()%>/js/jquery-1.8.2.min.js"></script>

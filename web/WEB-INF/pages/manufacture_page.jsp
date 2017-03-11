@@ -1,7 +1,8 @@
+<!--模具加工页面代码-->
 <%--
   Created by IntelliJ IDEA.
   User: dell
-  Date: 3/6/2017
+  Date: 3/9/2017
   Time: 4:55 PM
   To change this template use File | Settings | File Templates.
 --%>
@@ -25,11 +26,11 @@
 <div class="left_div">
     <p>添加供应商</p>
     <form id="addProvider" action="/addProvider" method="post">
-    <input type="text" name="cname" placeholder="name">
-    <input type="text" name="company" placeholder="company">
-    <input type="text" name="tel" placeholder="tel">
-    <input type="text" name="address" placeholder="address">
-    <input type="text" name="fax" placeholder="fax">
+    <input type="text" name="cname" placeholder="名称">
+    <input type="text" name="company" placeholder="公司">
+    <input type="text" name="tel" placeholder="电话">
+    <input type="text" name="address" placeholder="地址">
+    <input type="text" name="fax" placeholder="传真">
     <input type="submit">
     </form>
 </div>
@@ -45,12 +46,12 @@
         <form id="searchProvider" action="/searchProvider" method="post">
             <select  id="s_selector" onchange="setName(this,'s_type','s_selector')">
                 <option value="default" selected="selected">请选择搜索项</option>
-                <option value="id">ID</option>
-                <option value="cname">NAME</option>
-                <option value="tel">TEL</option>
-                <option value="company">Company</option>
+                <option value="id">按ID</option>
+                <option value="cname">按名称</option>
+                <option value="tel">按电话</option>
+                <option value="company">按公司</option>
             </select>
-            <input id="s_type" type="text"  placeholder="WHAT?">
+            <input id="s_type" type="text"  placeholder="输入检索内容">
             <input type="submit">
         </form>
     </div>
@@ -59,12 +60,12 @@
     <table class="bordered">
         <thead>
         <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>company</th>
-            <th>tel</th>
-            <th>address</th>
-            <th>fax</th>
+            <th>ID</th>
+            <th>名称</th>
+            <th>公司</th>
+            <th>电话</th>
+            <th>地址</th>
+            <th>传真</th>
         </tr>
         </thead>
 
@@ -114,16 +115,16 @@
     <div class="update_div">
         <p>更新供应商信息</p>
         <form  id="updateProvider" action="/updateProvider" method="post">
-            <input type="text" name="id" placeholder="id">
+            <input type="text" name="id" placeholder="请输入供应商ID">
             <select  id="u_selector" onchange="setName(this,'u_type','u_selector')">
                 <option value="default" selected="selected">请选择更改项</option>
-                <option value="cname">NAME</option>
-                <option value="tel">TEL</option>
-                <option value="company">Company</option>
-                <option value="address">ADDRESS</option>
-                <option value="fax">FAX</option>
+                <option value="cname">名称</option>
+                <option value="tel">电话</option>
+                <option value="company">公司</option>
+                <option value="address">地址</option>
+                <option value="fax">传真</option>
             </select>
-            <input id="u_type" type="text"  placeholder="WHAT?">
+            <input id="u_type" type="text"  placeholder="请输入新的值">
             <input type="submit">
         </form>
     </div>
@@ -131,7 +132,7 @@
     <div class="delete_div">
         <p>删除供应商</p>
         <form  id="deleteProvider" action="/deleteProvider" method="post">
-         <input name="id" placeholder="ID" type="text">
+         <input name="id" placeholder="请输入供应商ID" type="text">
          <input type="submit">
         </form>
     </div>

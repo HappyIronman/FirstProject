@@ -25,15 +25,15 @@
     <div class="update_div">
         <p>更新客户信息</p>
         <form  id="updateCustomer" action="/updateCustomer" method="post">
-            <input type="text" name="id" placeholder="id">
+            <input type="text" name="id" placeholder="请输入用户ID">
             <select  id="u_selector" onchange="setName(this,'u_type','u_selector')">
                 <option value="default" selected="selected">请选择更改项</option>
-                <option value="cname">NAME</option>
-                <option value="tel">TEL</option>
-                <option value="company">Company</option>
-                <option value="address">ADDRESS</option>
+                <option value="cname">客户姓名</option>
+                <option value="tel">客户电话</option>
+                <option value="company">客户公司名</option>
+                <option value="address">客户地址</option>
             </select>
-            <input id="u_type" type="text"  placeholder="WHAT?">
+            <input id="u_type" type="text"  placeholder="请输入新内容">
             <input type="submit">
         </form>
     </div>
@@ -41,7 +41,7 @@
     <div class="delete_div">
         <p>删除客户</p>
         <form  id="deleteCustomer" action="/deleteCustomer" method="post">
-            <input name="id" placeholder="ID" type="text">
+            <input name="id" placeholder="请输入客户ID" type="text">
             <input type="submit">
         </form>
     </div>
@@ -57,13 +57,13 @@
         <p>客户信息检索</p>
         <form id="searchCustomer" action="/searchCustomer" method="post">
             <select  id="s_selector" onchange="setName(this,'s_type','s_selector')">
-                <option value="default" selected="selected">请选择搜索项</option>
-                <option value="id">ID</option>
-                <option value="cname">NAME</option>
-                <option value="tel">TEL</option>
-                <option value="company">Company</option>
+                <option value="default" selected="selected">请选择检索项</option>
+                <option value="id">客户ID</option>
+                <option value="cname">客户姓名</option>
+                <option value="tel">客户电话</option>
+                <option value="company">客户公司名</option>
             </select>
-            <input id="s_type" type="text"  placeholder="WHAT?">
+            <input id="s_type" type="text"  placeholder="输入检索内容">
             <input type="submit">
         </form>
     </div>
@@ -72,11 +72,11 @@
     <table class="bordered">
         <thead>
         <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>company</th>
-            <th>tel</th>
-            <th>address</th>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>公司</th>
+            <th>电话</th>
+            <th>地址</th>
         </tr>
         </thead>
 
@@ -118,10 +118,10 @@
 <div class="right_div">
     <p>添加客户</p>
     <form id="addCustomer" action="/addCustomer" method="post">
-        <input type="text" name="cname" placeholder="name">
-        <input type="text" name="company" placeholder="company">
-        <input type="text" name="tel" placeholder="tel">
-        <input type="text" name="address" placeholder="address">
+        <input type="text" name="cname" placeholder="姓名">
+        <input type="text" name="company" placeholder="公司">
+        <input type="text" name="tel" placeholder="电话">
+        <input type="text" name="address" placeholder="地址">
         <input type="submit">
     </form>
 

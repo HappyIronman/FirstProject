@@ -81,6 +81,7 @@ public class Login_register {
 
 
 
+    //判断用户名是否重复
     @RequestMapping(value = "is_exist",method = RequestMethod.POST)
     public void is_exist(String username, HttpServletResponse response){
         System.out.println(username +"got!");

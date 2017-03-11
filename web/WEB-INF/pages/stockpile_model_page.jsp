@@ -1,3 +1,4 @@
+<!--成品库存页面代码-->
 <%--
   Created by IntelliJ IDEA.
   User: dell
@@ -29,10 +30,10 @@
         <form id="searchModel" action="/searchModel" method="post">
             <select  id="s_selector" onchange="setName(this,'s_type','s_selector')">
                 <option value="default" selected="selected">请选择搜索项</option>
-                <option value="id">ID</option>
-                <option value="name">NAME</option>
+                <option value="id">按ID</option>
+                <option value="name">按名称</option>
             </select>
-            <input id="s_type" type="text"  placeholder="WHAT?">
+            <input id="s_type" type="text"  placeholder="输入检索内容">
             <input type="submit">
         </form>
     </div>
@@ -42,10 +43,10 @@
     <table class="bordered">
         <thead>
         <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>num</th>
-            <th>date</th>
+            <th>ID</th>
+            <th>名称</th>
+            <th>数量（万件）</th>
+            <th>生产日期</th>
         </tr>
         </thead>
         <c:forEach items="${l_model}" var="model" varStatus="s" begin="0" end="${l_model.size()}">
