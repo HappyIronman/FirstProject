@@ -1,3 +1,4 @@
+<!--登录界面网页代码-->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -33,7 +34,6 @@
   </script>
 </head>
 <body>
-
 
 <div class="login">
   <div class="message">XXX系统-用户登录</div>

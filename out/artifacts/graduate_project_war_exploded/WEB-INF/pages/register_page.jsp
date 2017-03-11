@@ -1,3 +1,4 @@
+<!--注册页面代码-->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

@@ -1,3 +1,4 @@
+<!--成品库存页面代码-->
 <%--
   Created by IntelliJ IDEA.
   User: dell
